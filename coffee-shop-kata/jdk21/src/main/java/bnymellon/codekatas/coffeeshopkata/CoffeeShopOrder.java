@@ -65,9 +65,6 @@ public class CoffeeShopOrder
         Bagel bagel = new Bagel(BagelType.EVERYTHING, null, false);
         Cookie cookie = new Cookie(CookieType.CHOCOLATE_CHIP, false);
         Donut donut = new Donut(DonutType.GLAZED);
-        // TODO: Implement the receipt generation logic here.
-        // Hint: look at the Java 8 implementation in the jdk8 module,
-        // and the link above to see how record patterns can be utilized here
         return bagel.toString()+ cookie+ donut+"Total: $5.5";
     }
 
@@ -95,10 +92,6 @@ public class CoffeeShopOrder
             }
         }
 
-
-        // TODO: implement method
-        // Hint: look at the Java 8 implementation in the jdk8 module,
-        // and the link above to see how pattern matching for switch can be utilized here
         return returnList;
     }
 

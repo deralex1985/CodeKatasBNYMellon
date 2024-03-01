@@ -16,35 +16,20 @@
 
 package bnymellon.codekatas.coffeeshopkata.beverage;
 
-public class Americano implements CoffeeDrink
-{
-    private final DrinkTemperature drinkTemperature;
-
-    public Americano(DrinkTemperature drinkTemperature)
-    {
-        this.drinkTemperature = drinkTemperature;
-    }
-
-    public DrinkTemperature getDrinkTemperature()
-    {
-        return drinkTemperature;
-    }
+public record Americano(DrinkTemperature drinkTemperature) implements CoffeeDrink {
 
     @Override
-    public double getPrice()
-    {
+    public double getPrice() {
         return 2.00;
     }
 
     @Override
-    public int espressoShot()
-    {
+    public int espressoShot() {
         return 1;
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return drinkTemperature + " " + "Americano";
     }
 }

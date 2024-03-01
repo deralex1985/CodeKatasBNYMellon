@@ -16,7 +16,7 @@
 
 package bnymellon.codekatas.coffeeshopkata.beverage;
 
-public class Macchiato implements CoffeeDrink
+public non-sealed class Macchiato implements CoffeeDrink
 {
     private final MilkType milkType;
     private final FlavorSyrup flavorSyrup;
@@ -29,17 +29,17 @@ public class Macchiato implements CoffeeDrink
         this.drinkTemperature = drinkTemperature;
     }
 
-    public MilkType getMilkType()
+    public MilkType milkType()
     {
         return milkType;
     }
 
-    public FlavorSyrup getFlavorSyrup()
+    public FlavorSyrup flavorSyrup()
     {
         return flavorSyrup;
     }
 
-    public DrinkTemperature getDrinkTemperature()
+    public DrinkTemperature drinkTemperature()
     {
         return drinkTemperature;
     }
