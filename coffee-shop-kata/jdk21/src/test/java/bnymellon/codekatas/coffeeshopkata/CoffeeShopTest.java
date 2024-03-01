@@ -79,7 +79,6 @@ public class CoffeeShopTest
     @Test
     public void generateReceiptForFoodItemsTest()
     {
-        // TODO: Complete the method generateReceipt() in CoffeeShopOrder to make this pass
         String expectedReceipt = """
                 Bagel: EVERYTHING $2.5
                 Cookie: CHOCOLATE_CHIP $1.25

@@ -33,7 +33,9 @@ import bnymellon.codekatas.coffeeshopkata.food.Donut;
 import bnymellon.codekatas.coffeeshopkata.food.DonutType;
 import bnymellon.codekatas.coffeeshopkata.food.SpreadType;
 
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 public class CoffeeShopOrder
@@ -83,10 +85,21 @@ public class CoffeeShopOrder
      */
     public List<String> getFoodItemsForOrder()
     {
+        List<String> returnList = new ArrayList<>();
+        for (Item orderItem : orderItems) {
+            switch (orderItem){
+                case Donut donut -> returnList.add(donut.donutType() + " donut");
+                case Cookie cookie -> returnList.add(cookie.cookieType() + " cookie");
+                case Bagel bagel -> returnList.add(bagel.bagelType() + " bagel with " + bagel.spreadType() );
+                default -> {}
+            }
+        }
+
+
         // TODO: implement method
         // Hint: look at the Java 8 implementation in the jdk8 module,
         // and the link above to see how pattern matching for switch can be utilized here
-        return Collections.emptyList();
+        return returnList;
     }
 
     /**
