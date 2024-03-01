@@ -16,6 +16,8 @@
 
 package bnymellon.codekatas.coffeeshopkata.food;
 
+import java.util.Objects;
+
 /**
  * Replace the entire class with a Record.
  * This replaces the need for a constructor, getters, toString(),
@@ -35,8 +37,7 @@ public record Bagel(BagelType bagelType, SpreadType spreadType, boolean toasted)
         return 2.50;
     }
 
-    @Override
-    public String toString() {
+    public String toStringAnzeige() {
         return "Bagel: "+ bagelType() + " $"+getPrice()+"\n";
     }
 }

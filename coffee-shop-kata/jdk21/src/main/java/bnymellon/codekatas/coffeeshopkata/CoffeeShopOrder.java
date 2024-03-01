@@ -65,7 +65,7 @@ public class CoffeeShopOrder
         Bagel bagel = new Bagel(BagelType.EVERYTHING, null, false);
         Cookie cookie = new Cookie(CookieType.CHOCOLATE_CHIP, false);
         Donut donut = new Donut(DonutType.GLAZED);
-        return bagel.toString()+ cookie+ donut+"Total: $5.5";
+        return bagel.toStringAnzeige()+ cookie+ donut+"Total: $5.5";
     }
 
     /**
