@@ -23,4 +23,9 @@ public record Donut(DonutType donutType) implements BakeryItem
     {
         return 1.75;
     }
+
+    @Override
+    public String toString() {
+        return "Donut: "+ donutType() + " $"+getPrice()+"\n";
+    }
 }

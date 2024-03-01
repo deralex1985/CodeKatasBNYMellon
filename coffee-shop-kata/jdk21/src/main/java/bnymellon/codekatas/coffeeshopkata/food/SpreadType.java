@@ -21,5 +21,5 @@ public enum SpreadType
     BUTTER,
     PLAIN_CREAM_CHEESE,
     HERB_GARLIC_CREAM_CHEESE,
-    STRAWBERRY_JAM
+    STRAWBERRY_JAM,
 }

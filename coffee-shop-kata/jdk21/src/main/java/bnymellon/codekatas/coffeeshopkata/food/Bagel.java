@@ -28,13 +28,15 @@ package bnymellon.codekatas.coffeeshopkata.food;
 public record Bagel(BagelType bagelType, SpreadType spreadType, boolean toasted) implements BakeryItem
 {
 
-//    private final BagelType bagelType;
-//    private final SpreadType spreadType;
-//    private final boolean toasted;
 
     @Override
     public double getPrice()
     {
         return 2.50;
+    }
+
+    @Override
+    public String toString() {
+        return "Bagel: "+ bagelType() + " $"+getPrice()+"\n";
     }
 }

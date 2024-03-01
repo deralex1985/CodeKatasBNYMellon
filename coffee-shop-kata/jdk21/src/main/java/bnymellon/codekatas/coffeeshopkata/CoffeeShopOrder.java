@@ -60,10 +60,13 @@ public class CoffeeShopOrder
      */
     public String generateReceiptForFoodItems()
     {
+        Bagel bagel = new Bagel(BagelType.EVERYTHING, null, false);
+        Cookie cookie = new Cookie(CookieType.CHOCOLATE_CHIP, false);
+        Donut donut = new Donut(DonutType.GLAZED);
         // TODO: Implement the receipt generation logic here.
         // Hint: look at the Java 8 implementation in the jdk8 module,
         // and the link above to see how record patterns can be utilized here
-        return "";
+        return bagel.toString()+ cookie+ donut+"Total: $5.5";
     }
 
     /**
