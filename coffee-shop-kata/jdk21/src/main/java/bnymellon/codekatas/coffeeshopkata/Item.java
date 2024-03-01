@@ -19,4 +19,7 @@ package bnymellon.codekatas.coffeeshopkata;
 public interface Item
 {
     double getPrice();
+
+    //Todo
+//    String determineMessage();
 }

@@ -74,17 +74,18 @@ public class CoffeeShopOrder
      */
     public List<String> getFoodItemsForOrder()
     {
-        List<String> returnList = new ArrayList<>();
-        for (Item orderItem : orderItems) {
-            switch (orderItem){
-                case Donut donut -> returnList.add(donut.donutType() + " donut");
-                case Cookie cookie -> returnList.add(cookie.cookieType() + " cookie");
-                case Bagel bagel -> returnList.add(bagel.bagelType() + " bagel with " + bagel.spreadType() );
-                default -> {}
-            }
-        }
+        return orderItems.stream().map(CoffeeShopOrder::determineMessage).collect(Collectors.toList());
+    }
 
-        return returnList;
+    private static String determineMessage(Item orderItem) {
+        String string;
+        switch (orderItem){
+            case Donut donut -> string = donut.donutType() + " donut";
+            case Cookie cookie -> string = cookie.cookieType() + " cookie";
+            case Bagel bagel -> string = bagel.bagelType() + " bagel with " + bagel.spreadType();
+            default -> {string = "";}
+        }
+        return string;
     }
 
     /**
