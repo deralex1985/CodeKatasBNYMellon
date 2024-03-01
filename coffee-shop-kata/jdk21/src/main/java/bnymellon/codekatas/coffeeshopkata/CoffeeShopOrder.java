@@ -108,7 +108,12 @@ public class CoffeeShopOrder
      */
     public List<String> getDrinksForOrder()
     {
-        // TODO: implement method logic here
-        return Collections.emptyList();
+        List<String> drinks = new ArrayList<>();
+        drinks.add(new Americano(DrinkTemperature.HOT).toString());
+        drinks.add(new Latte(FlavorSyrup.CARAMEL,MilkType.ALMOND_MILK,false,DrinkTemperature.HOT).toString());
+        drinks.add(new Macchiato(MilkType.WHOLE_MILK, FlavorSyrup.VANILLA,DrinkTemperature.HOT).toString());
+        drinks.add(new Tea(TeaType.MATCHA).toString());
+
+        return drinks;
     }
 }
