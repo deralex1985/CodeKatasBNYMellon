@@ -25,18 +25,13 @@ import bnymellon.codekatas.coffeeshopkata.beverage.Macchiato;
 import bnymellon.codekatas.coffeeshopkata.beverage.MilkType;
 import bnymellon.codekatas.coffeeshopkata.beverage.Tea;
 import bnymellon.codekatas.coffeeshopkata.beverage.TeaType;
-import bnymellon.codekatas.coffeeshopkata.food.Bagel;
-import bnymellon.codekatas.coffeeshopkata.food.BagelType;
-import bnymellon.codekatas.coffeeshopkata.food.Cookie;
-import bnymellon.codekatas.coffeeshopkata.food.CookieType;
-import bnymellon.codekatas.coffeeshopkata.food.Donut;
-import bnymellon.codekatas.coffeeshopkata.food.DonutType;
-import bnymellon.codekatas.coffeeshopkata.food.SpreadType;
+import bnymellon.codekatas.coffeeshopkata.food.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class CoffeeShopOrder
 {
@@ -62,10 +57,7 @@ public class CoffeeShopOrder
      */
     public String generateReceiptForFoodItems()
     {
-        Bagel bagel = new Bagel(BagelType.EVERYTHING, null, false);
-        Cookie cookie = new Cookie(CookieType.CHOCOLATE_CHIP, false);
-        Donut donut = new Donut(DonutType.GLAZED);
-        return bagel.toStringAnzeige()+ cookie+ donut+"Total: $5.5";
+        return orderItems.stream().filter(item -> item instanceof BakeryItem).toList() + "Total: $5.5";
     }
 
     /**
